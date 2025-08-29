@@ -1,0 +1,46 @@
+{
+	"name": "dashboard-vue-plugin",
+	"version": "0.1.3",
+	"description": "",
+	"main": "dist/dashboard-vue-plugin.umd.js",
+	"module": "dist/lib-name.es.js",
+	"types": "dist/index.d.ts",
+	"styles": "dist/dashboard-vue-plugin.css",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "vite build && vue-tsc --declaration --emitDeclarationOnly",
+		"dev": "vite",
+		"watch:ts": "vue-tsc --declaration --emitDeclarationOnly --watch",
+		"watch:vite": "vite build --watch",
+		"watch:tw": "tailwindcss -i src/main.css -o dist_style/tailwind_output.css -w"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "",
+	"packageManager": "pnpm@10.15.0",
+	"dependencies": {
+		"@tailwindcss/vite": "^4.1.12",
+		"@vueuse/core": "^13.8.0",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"lucide-vue-next": "^0.541.0",
+		"reka-ui": "^2.5.0",
+		"tailwind-merge": "^3.3.1",
+		"tailwindcss": "^4.1.12",
+		"tailwindcss-animate": "^1.0.7",
+		"tw-animate-css": "^1.3.7",
+		"vue-sonner": "^2.0.8"
+	},
+	"devDependencies": {
+		"@tailwindcss/cli": "^4.1.12",
+		"@types/node": "^24.3.0",
+		"@vitejs/plugin-vue": "^6.0.1",
+		"typescript": "^5.9.2",
+		"vite": "^7.1.3",
+		"vue-tsc": "^3.0.6"
+	},
+	"peerDependencies": {
+		"vue": "^3.5.0"
+	}
+}
