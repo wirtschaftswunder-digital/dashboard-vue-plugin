@@ -6,7 +6,7 @@ export type DashboardBuildItem = {
     component: string
     props: object
     children: Omit<DashboardBuildItem, "children">[]
-    size: XY
+    size?: XY
 }
 export type DashboardBuildMeta = {
     gridSize: XY
@@ -23,5 +23,12 @@ export type BasicCardProps = {
     titleClass?: string;
     description?: string;
     descriptionClass?: string;
+    url?: string
+}
+
+export type MultiTextCardProps = {
+    text: string
+    classes?: string
+    newLine?: boolean
     url?: string
 }

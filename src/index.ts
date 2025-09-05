@@ -7,6 +7,8 @@ import ConfirmDialog from "./components/allowed/ConfirmDialog.vue";
 import Dashboard from "./components/allowed/Dashboard.vue";
 import MultiTextCard from "./components/allowed/MultiTextCard.vue";
 import AdvancedCard from "./components/allowed/AdvancedCard.vue";
+import StyledCard from "./components/allowed/StyledCard.vue";
+import StyledMultiCard from "./components/allowed/StyledMultiCard.vue";
 
 const components = {
     SimpleCard,
@@ -14,6 +16,8 @@ const components = {
     Dashboard,
     MultiTextCard,
     AdvancedCard,
+    StyledCard,
+    StyledMultiCard,
 }
 
 export {
@@ -22,6 +26,8 @@ export {
     Dashboard,
     MultiTextCard,
     AdvancedCard,
+    StyledCard,
+    StyledMultiCard,
 }
 
 export type AllowedComponents = keyof typeof components

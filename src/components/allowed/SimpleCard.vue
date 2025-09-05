@@ -18,9 +18,6 @@
 import { BasicCardProps } from "@/lib/common.types";
 import Card from "../ui/card/Card.vue";
 import CardContent from "../ui/card/CardContent.vue";
-import CardDescription from "../ui/card/CardDescription.vue";
-import CardHeader from "../ui/card/CardHeader.vue";
-import CardTitle from "../ui/card/CardTitle.vue";
 
 defineOptions({ name: "SimpleCard" });
 const props = defineProps<{ content?: string; contentClass?: string } & BasicCardProps>();
@@ -30,6 +27,5 @@ function openUrl(){
         window.location.replace(props.url)
     }
 }
-
 
 </script>

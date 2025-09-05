@@ -1,4 +1,5 @@
 # Setup
+
 1. Annahme der Pfade
     ```
     ./[App]/app/vite-[App]/package.json
@@ -15,17 +16,17 @@
 
 # Development mit HMR
 
-- 3 Shells
+-   3 Shells
 
-- `/[App]/app/vite-[App]`
+-   `/[App]/app/vite-[App]`
 
-    - ??? `pnpm add ../../../dashboard-vue-plugin`
-    - `pnpm dev` (1/3)
+    -   ??? `pnpm add ../../../dashboard-vue-plugin`
+    -   `pnpm dev` (1/3) Vite HMR
 
-- `/dashboard-vue-plugin/`
-    - `pnpm install`
-    - `pnpm watch:ts` (2/3) Typescript Types HMR
-    - `pnpm watch:tw` (3/3) Tailwind HMR
+-   `/dashboard-vue-plugin/`
+    -   `pnpm install`
+    -   `pnpm watch:ts` (2/3) Typescript Types HMR (benötigt Vite HMR)
+    -   `pnpm watch:tw` (3/3) Tailwind HMR (benötigt Vite HMR)
 
 <br>
 <br>
@@ -35,30 +36,49 @@
 
 # Aktuell Verfügbare Components
 
-- SimpleCard
-- ConfirmDialog
-
-
-
+-   SimpleCard
+-   MultiTextCard
+-   ConfirmDialog
+-   StyledCard
+-   StyledMultiCard
 
 # Props
 
-### SimpleCard
+### SimpleCard, StyledCard
 
-Nur 1 Icon
+-   `url?: string` On Click
+-   `title?: string`
+-   `titleClass?: string`
+-   `description?: string`
+-   `descriptionClass?: string`
+-   `content?: string`
+-   `contentClass?: string`
+-   `note?: string` (nur StyledCard)
+-   `noteClass?: string` (nur StyledCard)
 
-- `title?: string`
-- `description?: string`
-- `content?: string`
-- `footer?: string`
-- `iconFas?: string` [Fontawesome 5 Pro](https://fontawesome.com/v5/search?o=r)
-- `iconLc?: string` [Lucide](https://lucide.dev/icons/categories)
+### MultiTextCard
+
+-   `title?: string`
+-   `titleClass?: string`
+-   `description?: string`
+-   `descriptionClass?: string`
+-   `items: {text: string, classes?: string, newLine?: boolean}[]`
+
+### StyledMultiCard
+
+- `url?: string;`
+- `titleClass?: string;`
+- `contentClass?: string;`
+- `descriptionClass?: string;`
+- `noteClass?: string;`
+- `itemsTitle?: { text: string, classes?: string, newLine?: boolean, url?: string }[];`
+- `itemsContent?: { text: string, classes?: string, newLine?: boolean, url?: string }[];`
+- `itemsDescription?: { text: string, classes?: string, newLine?: boolean, url?: string }[];`
+- `itemsNote?: { text: string, classes?: string, newLine?: boolean, url?: string }[];`
 
 ### ConfirmDialog
 
-
-
-- `title?: string`
-- `description?: string`
-- `content?: string`
-- `footer?: string`
+-   `title?: string`
+-   `description?: string`
+-   `content?: string`
+-   `footer?: string`
