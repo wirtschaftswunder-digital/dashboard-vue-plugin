@@ -1,3 +1,5 @@
+import { HTMLAttributes } from "vue"
+
 export type XY = {
     x: number
     y: number
@@ -29,6 +31,8 @@ export type BasicCardProps = {
 export type MultiTextCardProps = {
     text: string
     classes?: string
+    className?: string
     newLine?: boolean
     url?: string
+    sameTab?: boolean
 }
