@@ -9,6 +9,7 @@ import MultiTextCard from "./components/allowed/MultiTextCard.vue";
 import AdvancedCard from "./components/allowed/AdvancedCard.vue";
 import StyledCard from "./components/allowed/StyledCard.vue";
 import StyledMultiCard from "./components/allowed/StyledMultiCard.vue";
+import HintTooltip from "./components/allowed/HintTooltip.vue";
 
 const components = {
     SimpleCard,
@@ -18,6 +19,7 @@ const components = {
     AdvancedCard,
     StyledCard,
     StyledMultiCard,
+    HintTooltip,
 }
 
 export {
@@ -28,6 +30,7 @@ export {
     AdvancedCard,
     StyledCard,
     StyledMultiCard,
+    HintTooltip,
 }
 
 export type AllowedComponents = keyof typeof components
