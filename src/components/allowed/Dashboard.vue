@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import "../../main.css";
+//import "../../main.css";
 import { computed } from "vue";
 import { getCadiComponent } from "../../index";
 import { DashboardBuildSource } from "@/lib/common.types";

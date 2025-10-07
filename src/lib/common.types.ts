@@ -1,5 +1,3 @@
-import { HTMLAttributes } from "vue"
-
 export type XY = {
     x: number
     y: number

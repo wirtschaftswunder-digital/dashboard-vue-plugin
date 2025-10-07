@@ -1,3 +1,7 @@
 <template>
-	<div>Component not found</div>
+	<div>Component "{{ name }}" not found</div>
 </template>
+
+<script setup lang="ts">
+defineProps<{name?: string}>()
+</script>

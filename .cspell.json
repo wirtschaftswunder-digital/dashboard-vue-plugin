@@ -1,4 +1,8 @@
 {
 	"language": "en,de",
-	"words": ["anbieter"]
+	"words": [
+		"anbieter",
+		"persistedstate",
+		"Persistedstate"
+	]
 }

@@ -1,5 +1,6 @@
 //import "../dist/dashboard-vue-plugin.css"
-import "../dist_style/tailwind_output.css"
+//import "../dist_style/tailwind_output.css"
+import "./main.css";
 import { App, Component } from "vue";
 import SimpleCard from "./components/allowed/SimpleCard.vue";
 import Missing from "./components/common/Missing.vue";
@@ -10,6 +11,7 @@ import AdvancedCard from "./components/allowed/AdvancedCard.vue";
 import StyledCard from "./components/allowed/StyledCard.vue";
 import StyledMultiCard from "./components/allowed/StyledMultiCard.vue";
 import HintTooltip from "./components/allowed/HintTooltip.vue";
+import { ViteLoader } from "./lib/injector.ts";
 
 const components = {
     SimpleCard,
@@ -33,6 +35,10 @@ export {
     HintTooltip,
 }
 
+export {
+    ViteLoader,
+}
+
 export type AllowedComponents = keyof typeof components
 
 export function getCadiComponent(name: string): Component {
@@ -43,7 +49,7 @@ export function getCadiComponent(name: string): Component {
 
 export function getPlugin() {
     return {
-        install(app: App, options?: any) {
+        install(app: App, _?: any) {
             for (const component of Object.values(components)) {
                 if (component.name)
                     app.component(component.name, component)

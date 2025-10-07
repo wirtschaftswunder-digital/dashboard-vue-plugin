@@ -2,8 +2,7 @@
 	"compilerOptions": {
 		"target": "ES2023",
 		"module": "ESNext",
-		"moduleResolution": "Node",
-		"strict": true,
+		"moduleResolution": "bundler",
 		"declaration": true,
 		"emitDeclarationOnly": true,
 		"outDir": "dist",
@@ -11,10 +10,17 @@
 		"skipLibCheck": true,
 		"jsx": "preserve",
 		"lib": ["ES2023", "DOM", "DOM.Iterable"],
-		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./src/*"]
-		}
+		},
+        "allowImportingTsExtensions": true,
+
+        "strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"erasableSyntaxOnly": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedSideEffectImports": true
 	},
 	"include": ["src"],
 	"exclude": ["node_modules", "dist"]
