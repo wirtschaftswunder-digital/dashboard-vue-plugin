@@ -1,6 +1,3 @@
-//import "../dist/dashboard-vue-plugin.css"
-//import "../dist_style/tailwind_output.css"
-import "./main.css";
 import { App, Component } from "vue";
 import SimpleCard from "./components/allowed/SimpleCard.vue";
 import Missing from "./components/common/Missing.vue";
