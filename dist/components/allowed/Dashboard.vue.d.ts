@@ -1,4 +1,4 @@
-import { DashboardBuildSource } from "@/lib/common.types";
+import { DashboardBuildSource } from "../../lib/common.types";
 type __VLS_Props = {
     source: DashboardBuildSource;
 };

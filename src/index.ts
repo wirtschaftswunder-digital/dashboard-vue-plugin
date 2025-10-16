@@ -9,6 +9,10 @@ import StyledCard from "./components/allowed/StyledCard.vue";
 import StyledMultiCard from "./components/allowed/StyledMultiCard.vue";
 import HintTooltip from "./components/allowed/HintTooltip.vue";
 import { ViteLoader } from "./lib/injector.ts";
+import DataTable from "./components/allowed/DataTable.vue";
+import DataTableHeader from "./components/DataTable/DataTableHeader.vue";
+import ToggleSwitch from "./components/allowed/ToggleSwitch.vue";
+import ArchiveParent from "./components/allowed/ArchiveParent.vue";
 
 const components = {
     SimpleCard,
@@ -19,6 +23,10 @@ const components = {
     StyledCard,
     StyledMultiCard,
     HintTooltip,
+    DataTable,
+    DataTableHeader,
+    ToggleSwitch,
+    ArchiveParent
 }
 
 export {
@@ -30,6 +38,10 @@ export {
     StyledCard,
     StyledMultiCard,
     HintTooltip,
+    DataTable,
+    DataTableHeader,
+    ToggleSwitch,
+    ArchiveParent,
 }
 
 export {

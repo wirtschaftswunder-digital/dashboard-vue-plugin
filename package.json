@@ -1,13 +1,15 @@
 {
 	"name": "dashboard-vue-plugin",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "",
 	"main": "dist/dashboard-vue-plugin.umd.js",
 	"module": "dist/lib-name.es.js",
 	"types": "dist/index.d.ts",
 	"styles": "dist/dashboard-vue-plugin.css",
 	"type": "module",
-    "files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "vite build && vue-tsc --declaration --emitDeclarationOnly",
@@ -15,7 +17,7 @@
 		"watch:ts": "vue-tsc --declaration --emitDeclarationOnly --watch",
 		"watch:vite": "vite build --watch",
 		"watch:tw": "tailwindcss -i src/main.css -o dist_style/tailwind_output.css -w",
-        "prepare": "pnpm build"
+		"prepare": "pnpm build"
 	},
 	"keywords": [],
 	"author": "",
@@ -23,11 +25,11 @@
 	"packageManager": "pnpm@10.15.0",
 	"dependencies": {
 		"@tailwindcss/vite": "^4.1.14",
+		"@tanstack/vue-table": "^8.21.3",
 		"@vueuse/core": "^13.9.0",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"lucide-vue-next": "^0.541.0",
-		
 		"reka-ui": "^2.5.1",
 		"tailwind-merge": "^3.3.1",
 		"tailwindcss": "^4.1.14",
@@ -46,7 +48,7 @@
 	},
 	"peerDependencies": {
 		"vue": "^3.5.0",
-        "pinia": "^3.0.3",
+		"pinia": "^3.0.3",
 		"pinia-plugin-persistedstate": "^4.5.0"
 	}
 }

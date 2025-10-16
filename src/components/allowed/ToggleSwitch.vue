@@ -7,5 +7,7 @@ const emit = defineEmits<(e: 'update', state: boolean) => void>()
 </script>
 
 <template>
-    <Switch :model-value="state" @update:model-value="(state) => emit('update', state)">{{ label }}</Switch>
+    <div class="text-xl size-5">
+        <Switch class="" v-model="state" @update:model-value="(state) => emit('update', state)">{{ label }}</Switch>
+    </div>
 </template>

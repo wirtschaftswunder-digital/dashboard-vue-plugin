@@ -1,5 +1,7 @@
+import { Updater } from "@tanstack/vue-table";
 import clsx, { ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { Ref } from "vue";
 import { ExternalToast, toast } from "vue-sonner";
 
 export function cn(...inputs: ClassValue[]) {
@@ -25,4 +27,13 @@ export function showToast(type: ToastType, title: string, options?: ExternalToas
     } else {
         toast(title, options)
     }
+}
+
+export function valueUpdater<T extends Updater<any>>(updaterOrValue: T, ref: Ref) {
+    ref.value = typeof updaterOrValue === 'function'
+        ? updaterOrValue(ref.value)
+        : updaterOrValue
+}
+export function getValueUpdaterValue<T extends Updater<any>>(updaterOrValue: T){
+    return typeof updaterOrValue === "function" ? updaterOrValue() : updaterOrValue
 }

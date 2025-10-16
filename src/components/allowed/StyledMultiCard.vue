@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { MultiTextCardProps } from "@/lib/common.types";
+import { MultiTextCardProps } from "../../lib/common.types";
 import Card from "../ui/card/Card.vue";
 import CardContent from "../ui/card/CardContent.vue";
 import MultiCardPart from "../parts/MultiCardPart.vue";

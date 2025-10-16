@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import { BasicCardProps } from "@/lib/common.types";
+import { BasicCardProps } from "../../lib/common.types";
 import Card from "../ui/card/Card.vue";
 import CardContent from "../ui/card/CardContent.vue";
 

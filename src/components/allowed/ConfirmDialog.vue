@@ -1,5 +1,5 @@
 <template>
-	<Dialog>
+	<Dialog :open="isOpen" @update:open="toggleOpen">
 		<DialogTrigger as-child>
 			<slot name="trigger">
 				<Button></Button>
@@ -11,15 +11,15 @@
 					<slot name="header" />
 				</DialogTitle>
 			</DialogHeader>
-            <div>
-                <slot />
-            </div>
+			<div>
+				<slot />
+			</div>
 			<DialogFooter>
 				<slot name="footer">
 					<DialogClose>
-						<Button @click="props.onCancel" variant="destructive">{{ props.cancelText ?? "Abbrechen" }}</Button>
+						<Button @click="cancel" variant="destructive">{{ props.cancelText ?? "Abbrechen" }}</Button>
 					</DialogClose>
-					<Button @click="props.onOk">{{ props.okText ?? "OK" }}</Button>
+					<Button @click="ok">{{ props.okText ?? "OK" }}</Button>
 				</slot>
 			</DialogFooter>
 		</DialogContent>
@@ -27,6 +27,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import Button from "../ui/button/Button.vue";
 import Dialog from "../ui/dialog/Dialog.vue";
 import DialogClose from "../ui/dialog/DialogClose.vue";
@@ -45,4 +46,19 @@ const props = defineProps<{
 	onOk?: () => void;
 	onCancel?: () => void;
 }>();
+
+const isOpen = ref(false);
+
+function toggleOpen(state?: boolean) {
+	isOpen.value = state ?? !isOpen.value;
+}
+
+function ok() {
+    toggleOpen(false);
+	if (props.onOk) props.onOk();
+}
+function cancel() {
+	toggleOpen(false);
+	if (props.onCancel) props.onCancel();
+}
 </script>

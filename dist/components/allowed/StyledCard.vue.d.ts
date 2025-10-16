@@ -1,4 +1,4 @@
-import { BasicCardProps } from "@/lib/common.types";
+import { BasicCardProps } from "../../lib/common.types";
 type __VLS_Props = {
     content?: string;
     contentClass?: string;

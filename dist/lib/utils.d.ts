@@ -1,6 +1,10 @@
+import { Updater } from "@tanstack/vue-table";
 import { ClassValue } from "clsx";
+import { Ref } from "vue";
 import { ExternalToast } from "vue-sonner";
 export declare function cn(...inputs: ClassValue[]): string;
 type ToastType = "ok" | "success" | "error" | "info";
 export declare function showToast(type: ToastType, title: string, options?: ExternalToast): void;
+export declare function valueUpdater<T extends Updater<any>>(updaterOrValue: T, ref: Ref): void;
+export declare function getValueUpdaterValue<T extends Updater<any>>(updaterOrValue: T): any;
 export {};

@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { MultiTextCardProps } from "@/lib/common.types";
+import { MultiTextCardProps } from "../../lib/common.types";
 import Button from "../ui/button/Button.vue";
 
 function openUrl(url: string, sameTab = false) {

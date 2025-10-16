@@ -1,4 +1,4 @@
-import { MultiTextCardProps } from "@/lib/common.types";
+import { MultiTextCardProps } from "../../lib/common.types";
 type __VLS_Props = {
     arr?: MultiTextCardProps[];
     class?: string;

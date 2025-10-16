@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { BasicCardProps, MultiTextCardProps } from "@/lib/common.types";
+import { BasicCardProps, MultiTextCardProps } from "../../lib/common.types";
 import Card from "../ui/card/Card.vue";
 import CardContent from "../ui/card/CardContent.vue";
 

@@ -23,7 +23,7 @@
 //import "../../main.css";
 import { computed } from "vue";
 import { getCadiComponent } from "../../index";
-import { DashboardBuildSource } from "@/lib/common.types";
+import { DashboardBuildSource } from "../../lib/common.types";
 defineOptions({ name: "Dashboard" });
 const { source } = defineProps<{ source: DashboardBuildSource }>();
 const gridSize = computed(() => {
