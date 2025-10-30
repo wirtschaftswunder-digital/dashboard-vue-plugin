@@ -105,17 +105,40 @@ declare const components: {
         itemsNote?: import("./lib/common.types.ts").MultiTextCardProps[];
         url?: string;
     }> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
-    HintTooltip: import("vue").DefineComponent<{
+    HintTooltip: {
+        new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{
+            content?: string;
+            classTrigger?: string;
+            classContent?: string;
+            contentHtml?: string;
+        }> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, Readonly<{
+            content?: string;
+            classTrigger?: string;
+            classContent?: string;
+            contentHtml?: string;
+        }> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        __isFragment?: never;
+        __isTeleport?: never;
+        __isSuspense?: never;
+    } & import("vue").ComponentOptionsBase<Readonly<{
         content?: string;
         classTrigger?: string;
         classContent?: string;
         contentHtml?: string;
-    }, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<{
-        content?: string;
-        classTrigger?: string;
-        classContent?: string;
-        contentHtml?: string;
-    }> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+    }> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+        $slots: {
+            trigger?: (props: {}) => any;
+        } & {
+            default?: (props: {}) => any;
+        };
+    });
     DataTable: <TData, TValue>(__VLS_props: NonNullable<Awaited<typeof __VLS_setup>>["props"], __VLS_ctx?: {
         attrs: any;
         slots: {

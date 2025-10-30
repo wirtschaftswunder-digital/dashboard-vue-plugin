@@ -17,7 +17,7 @@
 			<DialogFooter>
 				<slot name="footer">
 					<DialogClose>
-						<Button @click="cancel" variant="destructive">{{ props.cancelText ?? "Abbrechen" }}</Button>
+						<Button @click="cancel" variant="outline">{{ props.cancelText ?? "Abbrechen" }}</Button>
 					</DialogClose>
 					<Button @click="ok">{{ props.okText ?? "OK" }}</Button>
 				</slot>

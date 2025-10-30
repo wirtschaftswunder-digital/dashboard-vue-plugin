@@ -36,12 +36,14 @@ export type MultiTextCardProps = {
     newLine?: boolean
     url?: string
     sameTab?: boolean
+    hint?: string
 }
 
 export interface DataTableColumnHeaderProps {
 	column: Column<any, any>
 	title: string | VNode
 	hint?: string
+    classesBtn?: string
 }
 
 export interface DataTableViewOptionsProps<TData> {

@@ -2,18 +2,11 @@
 	<div v-if="column.getCanSort() || column.getCanHide()" :class="cn('flex space-x-2', $attrs.class ?? '')">
 		<DropdownMenu>
 			<DropdownMenuTrigger as-child>
-				<Button variant="ghost" size="sm" class="-ml-3 h-8 data-[state=open]:bg-accent">
+				<Button variant="ghost" size="sm" class="-ml-3 h-8 data-[state=open]:bg-accent" :class="classesBtn">
 					<span>{{ title }}</span>
-					<span v-if="hint" class="ml-2"
-						><TooltipProvider>
-							<Tooltip>
-								<TooltipTrigger><i class="fas fa-question-circle"></i></TooltipTrigger>
-								<TooltipContent>
-									{{ hint }}
-								</TooltipContent>
-							</Tooltip>
-						</TooltipProvider></span
-					>
+					<span v-if="hint" class="ml-2">
+                        <HintTooltip :content="hint"/>
+                    </span>
 					<i v-if="column.getIsSorted() === 'desc'" class="fas fa-arrow-down w-4 h-4 ml-2" />
 					<i v-else-if="column.getIsSorted() === 'asc'" class="fas fa-arrow-up w-4 h-4 ml-2" />
 					<i v-else-if="column.getCanSort()" class="fas fa-sort-alt w-4 h-4 ml-2" />
@@ -49,11 +42,8 @@
 import { cn } from '../../lib/utils'
 import { Button } from '../ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '../ui/dropdown-menu'
-import TooltipTrigger from '../ui/tooltip/TooltipTrigger.vue'
-import TooltipProvider from '../ui/tooltip/TooltipProvider.vue'
-import Tooltip from '../ui/tooltip/Tooltip.vue'
-import TooltipContent from '../ui/tooltip/TooltipContent.vue'
 import { DataTableColumnHeaderProps } from '../../lib/common.types'
+import HintTooltip from '../allowed/HintTooltip.vue'
 
 defineProps<DataTableColumnHeaderProps>()
 </script>
