@@ -14,6 +14,7 @@
 
 <script lang="ts" setup>
 import { MultiTextCardProps } from '@/lib/common.types';
+import Button from '../ui/button/Button.vue';
 
 defineProps<{item: MultiTextCardProps}>()
 
