@@ -22,11 +22,18 @@ declare const components: {
     } & import("./lib/common.types.ts").BasicCardProps> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
     ConfirmDialog: {
         new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{
+            modelValue?: boolean;
             okText?: string;
             cancelText?: string;
             onOk?: () => void;
             onCancel?: () => void;
-        }> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
+        }> & Readonly<{
+            "onUpdate:modelValue"?: ((open: boolean) => any) | undefined;
+        }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+            "update:modelValue": (open: boolean) => any;
+        }, import("vue").PublicProps, {
+            modelValue: boolean;
+        }, false, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
             P: {};
             B: {};
             D: {};
@@ -34,20 +41,32 @@ declare const components: {
             M: {};
             Defaults: {};
         }, Readonly<{
+            modelValue?: boolean;
             okText?: string;
             cancelText?: string;
             onOk?: () => void;
             onCancel?: () => void;
-        }> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        }> & Readonly<{
+            "onUpdate:modelValue"?: ((open: boolean) => any) | undefined;
+        }>, {}, {}, {}, {}, {
+            modelValue: boolean;
+        }>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
     } & import("vue").ComponentOptionsBase<Readonly<{
+        modelValue?: boolean;
         okText?: string;
         cancelText?: string;
         onOk?: () => void;
         onCancel?: () => void;
-    }> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+    }> & Readonly<{
+        "onUpdate:modelValue"?: ((open: boolean) => any) | undefined;
+    }>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+        "update:modelValue": (open: boolean) => any;
+    }, string, {
+        modelValue: boolean;
+    }, {}, string, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, import("vue").ComponentProvideOptions> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
             trigger?: (props: {}) => any;
         } & {
